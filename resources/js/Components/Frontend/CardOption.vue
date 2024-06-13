@@ -7,8 +7,8 @@ defineProps({
 </script>
 
 <template>
-<div class='container container_page'>
-    <div class='card_container'>
+<div class=' container_page'>
+    <div class='card_container container'>
         <h2 class='card_container--title'>{{props.title}}</h2>
         <div class='border_title'></div>
         <p class='card_container--text'>{{ props.text }}</p>
@@ -24,13 +24,14 @@ defineProps({
     background-color: black;
     position: relative;
     width: 100%;
-    min-height: 150vh; /* Incrementa la altura mínima para hacer el contenedor más alto */
+    padding: 100px 0;
+    // min-height: 150vh; /* Incrementa la altura mínima para hacer el contenedor más alto */
     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del contenedor */
     overflow: hidden; /* Para asegurar que el elipse no se desborde */
 }
 
 .container_page::before {
-    content: '';
+    // content: '';
     position: absolute;
     width: 800px;
     height: 800px;
@@ -45,11 +46,6 @@ defineProps({
 
 .card_container {
     background: linear-gradient(90.55deg, #101217 -23.29%, #323640 95.58%);
-    position: absolute;
-    bottom: 70px; /* Margen inferior de 20px */
-    left: 50px; /* Margen izquierdo de 30px */
-    right: 50px; /* Margen derecho de 30px */
-    padding: 40px 20px; /* Opcional, para agregar espacio interior */
     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del contenedor */
     overflow: hidden; /* Asegura que el elipse no se desborde del card container */
     z-index: 1; /* Asegura que esté sobre el elipse del contenedor padre */
@@ -70,7 +66,7 @@ defineProps({
     z-index: 0; /* Asegura que esté detrás del contenido del card container */
 }
 
-.card_container--title > h1 {
+.card_container--title  {
     color: white;
     text-align: center;
     padding: 30px 100px;
@@ -101,7 +97,7 @@ defineProps({
     padding: 0 0 80px 0;
 }
 
-.card_container--button > button {
+.card_container--button a {
     color: #FFFFFF;
     background-color: transparent;
     border-color: #70B22F;

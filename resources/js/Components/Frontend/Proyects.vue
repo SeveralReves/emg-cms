@@ -8,6 +8,7 @@ defineProps({
 
 <template>
     <div class="projectsp">
+
     <img
     v-if="props.proyectImage.path"
         class="projectsp--image"
@@ -15,7 +16,7 @@ defineProps({
         :src="props.proyectImage.path"
     />
     <div class="projectsp--overlay"></div>
-    <div class="header-containerp">
+    <div class="header-containerp container">
         <div class="header_leftp" v-html="props.header_leftp">
         </div>
         <div class="header_rightp" v-html="props.header_rightp">
@@ -45,12 +46,13 @@ defineProps({
     margin-bottom: 20px; /* Espacio entre los headers y la lista de proyectos */
 }
 .projectsp{
+    padding: 100px 0;
         background-color: #000000b8;
         display: grid;
         position: relative;
         overflow: hidden;
         width: 100%;
-        min-height: 100vh; /* Asegura que el contenedor cubra al menos toda la altura de la ventana */
+        // min-height: 100vh; /* Asegura que el contenedor cubra al menos toda la altura de la ventana */
         color: white; /* Color del texto en el contenedor */
         box-sizing: border-box;
 }
@@ -94,7 +96,7 @@ defineProps({
 .header_leftp > h4 {
     display: flex;
     align-items: center;
-    text-align: justify;
+    // text-align: justify;
     color: #DA6F17;
 }
 
@@ -121,8 +123,8 @@ defineProps({
 .project_listp {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, 219.33px) auto;
-    gap: 5px 70px;
+    grid-template-rows: repeat(7, 150) auto;
+    gap: 50px 70px;
     width: 50%;
     margin: 5% 25%;
 }
@@ -135,9 +137,9 @@ defineProps({
 
 /* Contenedor de cada proyecto */
 .list_containerp {
-    border: 2px solid orange;
+    // border: 2px solid orange;
     grid-row: auto / span 3;
-    width: 500px;
+    // width: 500px;
 }
 
 /* Imagen dentro de .list_containerp */
@@ -150,7 +152,7 @@ defineProps({
 /* Div dentro de .list_containerp */
 .list_containerp > div {
     color: white;
-    border: 2px solid purple;
+    // border: 2px solid purple;
     background-image: linear-gradient(to right, #323640, #101217);
     height: 24%;
     position: relative;
@@ -168,8 +170,8 @@ defineProps({
     font-size: 20px;
     color: #FFFFFF;
     font-weight: 400;
-    text-align: justify
-    ;
+    // text-align: justify
+    // ;
 }
 
 .buttonp{

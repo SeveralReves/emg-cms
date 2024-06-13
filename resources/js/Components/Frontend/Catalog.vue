@@ -8,24 +8,34 @@ defineProps({
 
 <template>
     <div class="list_options">
-    <div class="list_options_title">
-        <p v-if="props.catalog_header_left" class="list_options--headL">
-            <i class="list_options--headL-icon"></i>
-            <span v-html="props.catalog_header_left"></span>
-        </p>
-        <h2 v-if="props.catalog_header_right" v-html="props.catalog_header_right" class="list_options--headR"></h2>
-    </div>
-    <div class="list_options_body">
-        <article v-for="(catalog,index) in props.elements_options" :key="index" class="list_container">
-            <img :src="catalog.image.path" :alt="catalog.image.alt"/>
-            <div class="text_container">
-                <h2 class="title">{{catalog.title}}</h2>
-                <p class="description">{{catalog.description}}</p>
-                <button class="button">{{catalog.button}}</button>
+        <div class="container">
+            <div class="list_options_title">
+                <p v-if="props.catalog_header_left" class="list_options--headL">
+                    <i class="list_options--headL-icon"></i>
+                    <span v-html="props.catalog_header_left"></span>
+                </p>
+                <h2
+                    v-if="props.catalog_header_right"
+                    v-html="props.catalog_header_right"
+                    class="list_options--headR"
+                ></h2>
             </div>
-        </article>
+            <div class="list_options_body">
+                <article
+                    v-for="(catalog, index) in props.elements_options"
+                    :key="index"
+                    class="list_container"
+                >
+                    <img :src="catalog.image.path" :alt="catalog.image.alt" />
+                    <div class="text_container">
+                        <h2 class="title">{{ catalog.title }}</h2>
+                        <p class="description">{{ catalog.description }}</p>
+                        <button class="button">{{ catalog.button }}</button>
+                    </div>
+                </article>
+            </div>
+        </div>
     </div>
-</div>
 </template>
 
 <style lang="scss">
@@ -48,7 +58,7 @@ body {
 
 .list_options_title {
     display: flex;
-} 
+}
 
 .list_options_body {
     display: grid;
@@ -64,16 +74,16 @@ body {
     font-size: 32px;
     font-family: "DM sans", sans-serif;
     font-weight: 400;
-    color: #DA6F17;    
+    color: #da6f17;
     position: relative; /* Establece el contexto de posición para el elipse */
 }
 
 .list_options--headL::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 200px;
     height: 200px;
-    background-color: #E5883B; /* Color naranja */
+    background-color: #e5883b; /* Color naranja */
     border-radius: 50%;
     bottom: -100px; /* Ajusta la posición verticalmente */
     left: -100px; /* Ajusta la posición horizontalmente */
@@ -84,23 +94,23 @@ body {
     display: inline-block;
     width: 22.63px;
     height: 22.63px;
-    background-image: linear-gradient(180deg, #70B22F, #70B22f00);
+    background-image: linear-gradient(180deg, #70b22f, #70b22f00);
     transform: rotate(45deg);
     margin-right: 10px;
 }
 
 .list_options--headR {
     flex: 0 0 70%;
-    text-align: justify;
+    text-align: left;
     font-family: "DM sans", sans-serif;
     font-weight: 400;
     font-size: 67px;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 100px;
 
     /* degradado */
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(to bottom, #FFFFFF, #404040);
+    background: linear-gradient(to bottom, #ffffff, #404040);
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -113,11 +123,11 @@ body {
 }
 
 .list_container::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 200px;
     height: 200px;
-    background-color: #E5883B; /* Color naranja */
+    background-color: #e5883b; /* Color naranja */
     border-radius: 50%;
     bottom: -100px; /* Ajusta la posición verticalmente */
     left: -100px; /* Ajusta la posición horizontalmente */
@@ -140,7 +150,7 @@ body {
     font-family: "DM Sans", sans-serif;
     font-size: 41px;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: 0;
 }
 
@@ -149,19 +159,18 @@ body {
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .button {
     font-size: 20px;
     font-weight: 500;
     font-family: "DM Sans", sans-serif;
-    color: #FFFFFF;
-    background: #DA6F17;
+    color: #ffffff;
+    background: #da6f17;
     padding: 16px 12px;
     border-radius: 50px;
     margin-top: 10px; /* Espacio entre la descripción y el botón */
     align-self: flex-end; /* Alinea el botón a la derecha */
 }
-
 </style>

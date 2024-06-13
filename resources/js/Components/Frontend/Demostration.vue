@@ -48,7 +48,7 @@ defineProps({
     background-color: #000000b8;
     display: grid;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     width: 100%;
     min-height: 100vh; /* Asegura que el contenedor cubra al menos toda la altura de la ventana */
     color: white; /* Color del texto en el contenedor */
@@ -67,6 +67,7 @@ defineProps({
     right: -50%;
     bottom: -40%;
     pointer-events: none;
+    z-index: 1;
 }
 
 .demo_default--ellipse-top-right {
@@ -138,12 +139,16 @@ defineProps({
 }
 
 .demo_default--body h2 {
-    font-size: 68px;
+    font-size: 58px;
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     color: #ffffff;
     margin: 35px 0 100px 0;
     padding: 0 6%;
+        -webkit-text-fill-color: transparent;
+    background: linear-gradient(to bottom, #ffffff, #404040);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .demo_default--video {
