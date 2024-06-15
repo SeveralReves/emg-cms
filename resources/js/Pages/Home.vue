@@ -1,5 +1,6 @@
 <template>
     <div class="">
+        <Header :logo="header.logo" :menu="header.menu" :button="header.button"/>
         <Head :title="title_page" />
         <template v-for="(module, index) in modules" :key="index">
             <template v-if="module.title == 'HeroDefault'">
@@ -24,11 +25,14 @@
                 <ContactCard :props="module.props" />
             </template>
         </template>
+        <Footer />
     </div>
 </template>
 
 <script setup>
 import { Head, Link } from "@inertiajs/vue3";
+import Header from "../Components/Frontend/Header.vue";
+import Footer from "../Components/Frontend/Footer.vue";
 import HeroDefault from "../Components/Frontend/HeroDefault.vue";
 import Features from "../Components/Frontend/Features.vue";
 import Demostration from "../Components/Frontend/Demostration.vue";
@@ -44,6 +48,9 @@ defineProps({
     },
     canRegister: {
         type: Boolean,
+    },
+    header: {
+        type: Object,
     },
 });
 

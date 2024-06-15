@@ -22,3 +22,15 @@ createInertiaApp({
         color: '#4B5563',
     },
 });
+
+
+import Headroom from "headroom.js";
+// grab an element
+
+window.addEventListener("load", (event) => {
+    const myElement = document.querySelector(".header");
+    // construct an instance of Headroom, passing the element
+    const headroom  = new Headroom(myElement);
+    // initialise
+    headroom.init();
+  });

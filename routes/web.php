@@ -18,7 +18,35 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Home', [
-        'title_page' => 'EMG Remodelling'
+        'title_page' => 'EMG Remodelling',
+        'header' => [
+            'logo' => [
+                'url' => asset('images/Logo.png'),
+                'alt' => 'logo'
+            ],
+            'menu' => [
+                [
+                    'title' => 'Home',
+                    'url' => '#',
+                ],
+                [
+                    'title' => 'Services',
+                    'url' => '#',
+                ],
+                [
+                    'title' => 'About Us',
+                    'url' => '',
+                ],
+                [
+                    'title' => 'Contact Us',
+                    'url' => '',
+                ],
+            ],
+            'button' => [
+                'title' => 'Get a Quote',
+                'url' => '#'
+            ]
+        ]
     ]);
 });
 

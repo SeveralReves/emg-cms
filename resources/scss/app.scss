@@ -3,10 +3,9 @@
 body {
     font-family: Arial, sans-serif;
 }
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
-
 
 .container {
     width: 100%;
@@ -15,119 +14,133 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
-  @media (min-width: 576px) {
+}
+@media (min-width: 576px) {
     .container {
-      max-width: 540px;
+        max-width: 540px;
     }
-  }
-  @media (min-width: 768px) {
+}
+@media (min-width: 768px) {
     .container {
-      max-width: 720px;
+        max-width: 720px;
     }
-  }
-  @media (min-width: 992px) {
+}
+@media (min-width: 992px) {
     .container {
-      max-width: 960px;
+        max-width: 960px;
     }
-  }
-  @media (min-width: 1200px) {
+}
+@media (min-width: 1200px) {
     .container {
-      max-width: 1140px;
+        max-width: 1140px;
     }
-  }
-  @media (min-width: 1300px) {
+}
+@media (min-width: 1300px) {
     .container {
-      max-width: 1290px;
+        max-width: 1290px;
     }
-  }
-  
-  .container-secondary {
+}
+
+.container-secondary {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
-  @media (min-width: 576px) {
+}
+@media (min-width: 576px) {
     .container-secondary {
-      max-width: 540px;
+        max-width: 540px;
     }
-  }
-  @media (min-width: 768px) {
+}
+@media (min-width: 768px) {
     .container-secondary {
-      max-width: 720px;
+        max-width: 720px;
     }
-  }
-  @media (min-width: 992px) {
+}
+@media (min-width: 992px) {
     .container-secondary {
-      max-width: 960px;
+        max-width: 960px;
     }
-  }
-  @media (min-width: 1200px) {
+}
+@media (min-width: 1200px) {
     .container-secondary {
-      max-width: 1140px;
+        max-width: 1140px;
     }
+}
+
+.button{
+  &__primary{
+    --bg-color: #DA6F17;
+    --font-color: #ffffff;
+    padding: 16px 24px;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    border-radius: 50px;
   }
-  
-  //
+}
+//
 // Fonts file
 //
 // Allocated area for font definitions used by this application
 //
 
 @font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-black-webfont.eot');
-  src: url('../fonts/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/lato-black-webfont.svg#latoblack') format('svg'),
-       url('../fonts/lato-black-webfont.woff') format('woff'),
-       url('../fonts/lato-black-webfont.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: "lato";
+    src: url("../fonts/lato-black-webfont.eot");
+    src: url("../fonts/lato-black-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/lato-black-webfont.svg#latoblack") format("svg"),
+        url("../fonts/lato-black-webfont.woff") format("woff"),
+        url("../fonts/lato-black-webfont.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-italic-webfont.eot');
-  src: url('../fonts/lato-italic-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/lato-italic-webfont.svg#latoitalic') format('svg'),
-       url('../fonts/lato-italic-webfont.woff') format('woff'),
-       url('../fonts/lato-italic-webfont.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
+    font-family: "lato";
+    src: url("../fonts/lato-italic-webfont.eot");
+    src: url("../fonts/lato-italic-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/lato-italic-webfont.svg#latoitalic") format("svg"),
+        url("../fonts/lato-italic-webfont.woff") format("woff"),
+        url("../fonts/lato-italic-webfont.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-regular-webfont.eot');
-  src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/lato-regular-webfont.svg#latoregular') format('svg'),
-       url('../fonts/lato-regular-webfont.woff') format('woff'),
-       url('../fonts/lato-regular-webfont.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: "lato";
+    src: url("../fonts/lato-regular-webfont.eot");
+    src: url("../fonts/lato-regular-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/lato-regular-webfont.svg#latoregular") format("svg"),
+        url("../fonts/lato-regular-webfont.woff") format("woff"),
+        url("../fonts/lato-regular-webfont.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato-light-webfont.eot');
-  src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/lato-light-webfont.svg#latolight') format('svg'),
-       url('../fonts/lato-light-webfont.woff') format('woff'),
-       url('../fonts/lato-light-webfont.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+    font-family: "lato";
+    src: url("../fonts/lato-light-webfont.eot");
+    src: url("../fonts/lato-light-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/lato-light-webfont.svg#latolight") format("svg"),
+        url("../fonts/lato-light-webfont.woff") format("woff"),
+        url("../fonts/lato-light-webfont.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 //
 // Chrome exhibits strange behavior when custom fonts are used
 // on select inputs. This fixes the garbled text.
 //
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  select {
-      font-family: sans-serif;
-  }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select {
+        font-family: sans-serif;
+    }
 }
