@@ -50,6 +50,9 @@ defineProps({
     overflow: hidden; /* Asegura que el elipse no se desborde del card container */
     z-index: 1; /* Asegura que esté sobre el elipse del contenedor padre */
     background-clip: padding-box; /* Evita que el color del elipse del contenedor padre afecte el card container */
+    &--a{
+        border: 1px solid #70B22F;
+    }
 }
 
 .card_container::before {

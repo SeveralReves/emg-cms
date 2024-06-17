@@ -27,7 +27,9 @@ defineProps({
                 class="demo_default--video"
                 :src="props.video.path"
                 width="100%"
-                controls
+                no-controls
+                autoplay
+                muted
             >
                 Tu navegador no soporta el elemento de video.
             </video>

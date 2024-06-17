@@ -1,6 +1,10 @@
 <template>
     <div class="">
-        <Header :logo="header.logo" :menu="header.menu" :button="header.button"/>
+        <Header
+            :logo="header.logo"
+            :menu="header.menu"
+            :button="header.button"
+        />
         <Head :title="title_page" />
         <template v-for="(module, index) in modules" :key="index">
             <template v-if="module.title == 'HeroDefault'">
@@ -25,7 +29,14 @@
                 <ContactCard :props="module.props" />
             </template>
         </template>
-        <Footer />
+        <Footer
+            :logo="footer.logo"
+            :description="footer.description"
+            :contact="footer.contact"
+            :copyright="footer.copyright"
+            :links="footer.links"
+            :rrss="footer.rrss"
+        />
     </div>
 </template>
 
@@ -41,7 +52,6 @@ import Catalog from "../Components/Frontend/Catalog.vue";
 import Proyects from "../Components/Frontend/Proyects.vue";
 import ContactCard from "../Components/Frontend/ContactCard.vue";
 
-
 defineProps({
     title_page: {
         type: String,
@@ -50,6 +60,9 @@ defineProps({
         type: Boolean,
     },
     header: {
+        type: Object,
+    },
+    footer: {
         type: Object,
     },
 });
@@ -69,6 +82,7 @@ import Frame7 from "../../images/Frame-6.png";
 import Frame8 from "../../images/Frame-6.png";
 import Frame9 from "../../images/Frame-6.png";
 import Frame10 from "../../images/Frame-6.png";
+import video from "../../images/video-1.mp4";
 
 const modules = [
     {
@@ -127,7 +141,7 @@ const modules = [
             title: '<p><i class="header_left--iconp"></i>Who We Are</p>',
             text: "<h2>WELCOME TO BITWOOD BUILD, WHERE WE STRIVE TO DELIVER TOP-QUALITY HOME REMODELS. AND RENOVATIONS THAT EXCEED YOUR EXPECTATIONS.</h2>",
             image: { path: IconFeat, alt: "image" },
-            video: { path: "assets/images/poli.mp4", alt: "video" },
+            video: { path: video, alt: "video" },
             subtext:
                 "Whether you’re looking for a small renovation or a full-scale remodel, we’re here to make your dreams a reality. Contact us today to schedule your consultation and take the first step towards your dream home.",
             button: {
@@ -292,7 +306,7 @@ const modules = [
         title: "ContactCard",
         props: {
             card_titlec:
-                '<h1>Call The Leading Home Remodeling Contractor Today!</h1>',
+                "<h1>Call The Leading Home Remodeling Contractor Today!</h1>",
             card_textc:
                 "Lorem ipsum dolor sit amet consectetur. Iaculis ac vitae a rutrum in non nullam viverra. Est mattis dolor eget sociis quam nunc. Malesuada eget non pretium aliquet. Imperdiet id amet pulvinar eleifend mauris",
             card_buttonc: "<button>Contact Now</button>",

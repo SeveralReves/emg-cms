@@ -25,11 +25,11 @@ defineProps({
     <div class="project_listp">
         <article v-for="projectp,index in props.projects_optionsp" :key="index" class="list_containerp">
             <img :src="projectp.image.path" :alt="projectp.image.alt" />
-            <div>
+            <div class="list_containerp--box">
                 <h2 class="titlep">{{ projectp.title }}</h2>
-                <img class="list_container--iconp" :src="projectp.icon.path" :alt="projectp.icon.alt" />
+                <!-- <img class="list_container--iconp" :src="projectp.icon.path" :alt="projectp.icon.alt" /> -->
                 <p class="descriptionp">{{ projectp.description }}</p>
-                <div class="buttonp" v-html="projectsp?.button ?? 'Lean More'"></div>
+                <!-- <div class="buttonp" v-html="projectsp?.button ?? 'Lean More'"></div> -->
             </div>
         </article>
     </div>
@@ -109,7 +109,14 @@ defineProps({
     background-clip: text;
     background-image: linear-gradient(180deg, #FFFFFF, #404040);
 }
-
+.titlep{
+    font-family: 'DM sans', sans-serif;
+    font-size: 20px;
+}
+.descriptionp{
+    font-family: 'DM sans', sans-serif;
+    font-size: 16px;
+}
 /* Icono en header izquierdo */
 .header_left--iconp {
     width: 22.63px;
@@ -124,7 +131,7 @@ defineProps({
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, 150) auto;
-    gap: 50px 70px;
+    gap: 60px 70px;
     width: 50%;
     margin: 5% 25%;
 }
@@ -140,6 +147,9 @@ defineProps({
     // border: 2px solid orange;
     grid-row: auto / span 3;
     // width: 500px;
+    &--box{
+        padding: 20px;
+    }
 }
 
 /* Imagen dentro de .list_containerp */
@@ -154,7 +164,6 @@ defineProps({
     color: white;
     // border: 2px solid purple;
     background-image: linear-gradient(to right, #323640, #101217);
-    height: 24%;
     position: relative;
 }
 
