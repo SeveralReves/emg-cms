@@ -29,8 +29,10 @@ import Headroom from "headroom.js";
 
 window.addEventListener("load", (event) => {
     const myElement = document.querySelector(".header");
-    // construct an instance of Headroom, passing the element
-    const headroom  = new Headroom(myElement);
-    // initialise
-    headroom.init();
+    if(myElement){
+        // construct an instance of Headroom, passing the element
+        const headroom  = new Headroom(myElement);
+        // initialise
+        headroom.init();
+    }
   });

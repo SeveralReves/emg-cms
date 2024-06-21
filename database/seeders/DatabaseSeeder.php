@@ -17,15 +17,19 @@ class DatabaseSeeder extends Seeder
     {
         
         // \App\Models\User::factory(10)->create();
-        User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => Hash::make('admin12345678'),
-        ]);
-        $roleAdmin = Role::create(['name' => 'admin']);
-        $roleEditor = Role::create(['name' => 'publisher']);
+        // User::factory()->create([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@admin.com',
+        //     'password' => Hash::make('admin12345678'),
+        // ]);
+        // $roleAdmin = Role::create(['name' => 'admin']);
+        // $roleEditor = Role::create(['name' => 'publisher']);
 
-        $user = User::find(1); // Encuentra al primer usuario registrado
-        $user->assignRole($roleAdmin);
+        // $user = User::find(1); // Encuentra al primer usuario registrado
+        // $user->assignRole($roleAdmin);
+        $this->call([
+            OptionSeeder::class,
+            // Puedes llamar a otros seeders aquí si los tienes
+        ]);
     }
 }

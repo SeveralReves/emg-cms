@@ -132,8 +132,8 @@ defineProps({
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, 150) auto;
     gap: 60px 70px;
-    width: 50%;
-    margin: 5% 25%;
+    width: 65%;
+    margin: 5% 20%;
 }
 
 /* Estilos para el tercer hijo de .project_listp */
