@@ -10,7 +10,7 @@
             <template v-if="module.title == 'HeroDefault'">
                 <HeroDefault :props="module.props" />
             </template>
-            <template v-else-if="module.title == 'Features'">
+             <template v-else-if="module.title == 'Features'">
                 <Features :props="module.props" />
             </template>
             <template v-else-if="module.title == 'Demostration'">
@@ -27,7 +27,7 @@
             </template>
             <template v-else-if="module.title == 'ContactCard'">
                 <ContactCard :props="module.props" />
-            </template>
+            </template> 
         </template>
         <Footer
             :logo="footer.logo"

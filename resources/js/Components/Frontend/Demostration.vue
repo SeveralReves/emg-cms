@@ -55,6 +55,7 @@ defineProps({
     min-height: 100vh; /* Asegura que el contenedor cubra al menos toda la altura de la ventana */
     color: white; /* Color del texto en el contenedor */
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .demo_default--ellipse {

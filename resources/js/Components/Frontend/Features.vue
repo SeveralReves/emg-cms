@@ -54,7 +54,7 @@ defineProps({
         .title {
             font-family: "DM sans", sans-serif;
             font-size: 40px;
-            width: 900px;
+            // width: 900px;
             padding: 0;
             border: red;
             font-weight: 500;
