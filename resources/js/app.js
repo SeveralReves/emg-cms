@@ -35,4 +35,13 @@ window.addEventListener("load", (event) => {
         // initialise
         headroom.init();
     }
+
+    const buttonMobile = document.querySelector(".header__mobile--button");
+    const menuMobile = document.querySelector(".header__mobile");
+    if(buttonMobile && menuMobile){
+        buttonMobile.addEventListener('click', () => {
+            menuMobile.classList.toggle('is-active');
+            buttonMobile.classList.toggle('is-active');
+        })
+    }
   });

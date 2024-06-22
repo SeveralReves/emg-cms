@@ -145,10 +145,16 @@ defineProps({
     &__container {
         display: flex;
         gap: 50px;
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
         &--bottom {
             border-top: 1px solid #ffffff;
             margin-top: 50px;
             padding-top: 20px;
+            @media (max-width: 992px) {
+                width: 93%;
+            }
         }
     }
     &__copyright {

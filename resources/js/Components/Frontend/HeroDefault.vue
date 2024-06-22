@@ -9,7 +9,7 @@ defineProps({
 <template>
     <div class="hero__default">
         <span class="hero__default--ellipse"></span>
-        
+
         <img
             v-if="props.hero_image.path"
             class="hero__default--image"
@@ -27,7 +27,11 @@ defineProps({
                     :alt="props.icon.alt"
                 />
             </div>
-            <p v-if="props.hero_text" class="hero__default--text" v-html="props.hero_text"></p>
+            <p
+                v-if="props.hero_text"
+                class="hero__default--text"
+                v-html="props.hero_text"
+            ></p>
         </div>
     </div>
 </template>
@@ -37,6 +41,9 @@ defineProps({
     display: grid;
     position: relative;
     overflow: hidden;
+    @media (max-width: 992px) {
+        min-height: 85vh;
+    }
     &--title {
         display: flex;
         flex-direction: column;
@@ -48,8 +55,11 @@ defineProps({
             font-size: 48px;
             font-weight: 400;
             color: #fff;
-            span { 
+            span {
                 color: #e5883b;
+            }
+            @media (max-width: 992px) {
+                font-size: 32px;
             }
         }
     }
@@ -65,6 +75,14 @@ defineProps({
         position: relative;
         height: fit-content;
         margin: auto;
+        @media (max-width: 992px) {
+            flex-direction: column;
+            padding-top: 120px;
+            padding-bottom: 60px;
+            justify-content: flex-end;
+            gap: 30px;
+            height: 100%;
+        }
     }
 
     &--text {
@@ -73,6 +91,9 @@ defineProps({
         font-size: 20px;
         font-weight: 400;
         color: #fff;
+        @media (max-width: 992px) {
+            font-size: 16px;
+        }
     }
     &--overlay {
         background-color: #000000b8;
@@ -86,26 +107,31 @@ defineProps({
         grid-column-start: 1;
         grid-row-end: 2;
         grid-column-end: 1;
+        height: 100%;
+        object-fit: cover;
     }
     &--ellipse {
-      position: absolute;
-      display: block;
-      border-radius: 50%;
-      width: 1087px;
-      height: 1087px;
-      background-color: #E5883B;
-      opacity: 0.3;
-      filter: blur(100px);
-      right: calc(-50% );
-      bottom: calc(-50% );
-      pointer-events: none;
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        width: 1087px;
+        height: 1087px;
+        background-color: #e5883b;
+        opacity: 0.3;
+        filter: blur(100px);
+        right: calc(-50%);
+        bottom: calc(-50%);
+        pointer-events: none;
+        @media (max-width: 992px) {
+            max-width: 70%;
+            right: 0;
+        }
     }
-    
-    &--icon{
-    //   position: absolute;
-    //   top: 120%;
-    //   left: 0;
+
+    &--icon {
+        //   position: absolute;
+        //   top: 120%;
+        //   left: 0;
     }
 }
-
 </style>

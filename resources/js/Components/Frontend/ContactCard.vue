@@ -31,13 +31,18 @@ defineProps({
     position: absolute bottom;
 }
 
-.card_container--titlec > h1 {
+.card_container--titlec > h1,
+.card_container--titlec > h2 {
     color: white;
     text-align: center;
     padding: 30px 40px;
     font-size: 60px;
     font-family: "DM sans", sans serif;
     font-weight: 400;
+    @media (max-width: 992px) {
+        font-size: 32px;
+        padding: 32px 0 10px;
+    }
 }
 .border_titlec {
     border-bottom: 2px solid green;
@@ -47,14 +52,17 @@ defineProps({
 
 .card_container--textc {
     color: white;
-}
-.card_container--textc {
     font-family: "DM sans", sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #ffffff;
     text-align: center;
     padding: 50px;
+    @media (max-width: 992px) {
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 0;
+}
 }
 .card_container--buttonc {
     display: flex;

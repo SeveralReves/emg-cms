@@ -36,6 +36,10 @@ defineProps({
     &__container {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 992px) {
+            gap: 60px;
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -44,12 +48,18 @@ defineProps({
         padding-left: 3rem;
         box-sizing: border-box;
         &:not(:first-child) {
-            border-left: 1px solid white;
+            @media (min-width: 992px) {
+                border-left: 1px solid white;
+            }
+        }
+        @media (max-width: 992px) {
+            width: 100%;
+            padding: 0;
         }
         & > img {
             border: 1px solid orange;
             min-height: 20px;
-            min-width: 20;
+            min-width: 20px;
         }
         .title {
             font-family: "DM sans", sans-serif;
@@ -59,6 +69,10 @@ defineProps({
             border: red;
             font-weight: 500;
             margin: 70px 0 0 0;
+            @media (max-width: 992px) {
+                margin-top: 20px;
+            font-size: 28px;
+        }
         }
 
         .text {

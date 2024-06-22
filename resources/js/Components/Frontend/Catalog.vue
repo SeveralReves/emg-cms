@@ -54,10 +54,17 @@ body {
     background: black;
     padding: 80px 30px;
     position: relative; /* Establece el contexto de posición para los elementos absolutos */
+    @media (max-width: 992px) {
+        padding-left: 0;
+        padding-right: 0;
+}
 }
 
 .list_options_title {
     display: flex;
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
 }
 
 .list_options_body {
@@ -65,6 +72,11 @@ body {
     grid-template-columns: 1fr 1fr;
     padding: 60px;
     gap: 50px 50px; /** separación o rellenos entre filas y columnas **/
+    @media (max-width: 992px) {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .list_options--headL {
@@ -76,6 +88,10 @@ body {
     font-weight: 400;
     color: #da6f17;
     position: relative; /* Establece el contexto de posición para el elipse */
+    @media (max-width: 992px) {
+        padding: 0;
+        text-align: left;
+    }
 }
 
 .list_options--headL::before {
@@ -113,6 +129,10 @@ body {
     background: linear-gradient(to bottom, #ffffff, #404040);
     -webkit-background-clip: text;
     background-clip: text;
+    @media (max-width: 992px) {
+        padding: 0;
+        font-size: 32px;
+    }
 }
 
 .list_container {
@@ -144,6 +164,10 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 992px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .title {

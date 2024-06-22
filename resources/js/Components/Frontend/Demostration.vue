@@ -139,6 +139,9 @@ defineProps({
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     padding-top: 100px;
+    @media (max-width: 992px) {
+        font-size:28px;
+    }
 }
 
 .demo_default--body h2 {
@@ -148,10 +151,14 @@ defineProps({
     color: #ffffff;
     margin: 35px 0 100px 0;
     padding: 0 6%;
-        -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
     background: linear-gradient(to bottom, #ffffff, #404040);
     -webkit-background-clip: text;
     background-clip: text;
+    @media (max-width: 992px) {
+        font-size: 32px;
+        padding: 0;
+    }
 }
 
 .demo_default--video {
@@ -164,6 +171,11 @@ defineProps({
     color: #ffffff;
     margin: 0 20%;
     padding: 70px;
+    @media (max-width: 992px) {
+        padding: 0;
+        font-size: 18px;
+        margin: 30px 0 0;
+    }
 }
 
 .demo_default--button {
@@ -184,5 +196,5 @@ defineProps({
     &:hover {
         background-color: #51574b; /* Cambia el color de fondo al pasar el ratón */
     }
-}   
+}
 </style>
