@@ -19,7 +19,7 @@ defineProps({
         <div class="hero__default--overlay"></div>
         <div class="hero__default--content container">
             <div class="hero__default--title">
-                <span v-if="props.hero_title" v-html="props.hero_title"></span>
+                <span v-if="props.hero_title" v-html="props.hero_title"  data-aos="fade-up" data-aos-duration="1000"></span>
                 <img
                     v-if="props.icon.path"
                     class="hero__default--icon"
@@ -31,6 +31,9 @@ defineProps({
                 v-if="props.hero_text"
                 class="hero__default--text"
                 v-html="props.hero_text"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"
             ></p>
         </div>
     </div>

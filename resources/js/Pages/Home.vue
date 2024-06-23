@@ -309,7 +309,24 @@ const modules = [
                 "<h1>Call The Leading Home Remodeling Contractor Today!</h1>",
             card_textc:
                 "Lorem ipsum dolor sit amet consectetur. Iaculis ac vitae a rutrum in non nullam viverra. Est mattis dolor eget sociis quam nunc. Malesuada eget non pretium aliquet. Imperdiet id amet pulvinar eleifend mauris",
-            card_buttonc: "<button>Contact Now</button>",
+            form: {
+                email: {
+                    label: 'Email:',
+                    placeholder: 'example@email.com'
+                },
+                name: {
+                    label: 'Name',
+                    placeholder: 'Name'
+                },
+                phone: {
+                    label: 'Phone',
+                    placeholder: '+1 446 XXX XXXX'
+                },
+                description:{
+                    label: 'Description',
+                    placeholder: 'Description...'
+                },
+            },
         },
     },
 ];

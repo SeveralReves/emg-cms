@@ -13,6 +13,8 @@ defineProps({
                 v-for="(feature, index) in props.items"
                 :key="index"
                 class="features__item"
+                data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="200" 
             >
                 <img :src="feature.icon.path" :alt="feature.icon.alt" />
                 <h2 class="title">{{ feature.title }}</h2>
