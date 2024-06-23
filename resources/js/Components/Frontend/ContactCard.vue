@@ -91,7 +91,7 @@ const onSubmit = handleSubmit(async (values) => {
 </script>
 
 <template>
-    <div class="container_pagec">
+    <div id="quote"  class="container_pagec">
         <loader :loading="loading" />
         <div class="card_containerc">
             <div class="container">

@@ -9,10 +9,29 @@ defineProps({
 <template>
     <div class="container_page">
         <div class="card_container container">
-            <h2 class="card_container--title">{{ props.title }}</h2>
+            <h2
+                class="card_container--title"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+            >
+                {{ props.title }}
+            </h2>
             <div class="border_title"></div>
-            <p class="card_container--text">{{ props.text }}</p>
-            <div class="card_container--button">
+            <p
+                class="card_container--text"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+            >
+                {{ props.text }}
+            </p>
+            <div
+                class="card_container--button"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+            >
                 <a
                     v-for="(button, index) in props.buttons"
                     :key="index"
@@ -66,6 +85,10 @@ defineProps({
     background-clip: padding-box; /* Evita que el color del elipse del contenedor padre afecte el card container */
     &--a {
         border: 1px solid #70b22f;
+        transition: all 500ms ease-in-out;
+        &:hover {
+            background-color: #70b22f;
+        }
     }
     @media (max-width: 992px) {
         padding-top: 30px;

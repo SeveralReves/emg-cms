@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="hero__default">
+    <div id="home" class="hero__default">
         <span class="hero__default--ellipse"></span>
 
         <img

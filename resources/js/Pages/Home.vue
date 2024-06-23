@@ -10,7 +10,7 @@
             <template v-if="module.title == 'HeroDefault'">
                 <HeroDefault :props="module.props" />
             </template>
-             <template v-else-if="module.title == 'Features'">
+            <template v-else-if="module.title == 'Features'">
                 <Features :props="module.props" />
             </template>
             <template v-else-if="module.title == 'Demostration'">
@@ -27,7 +27,7 @@
             </template>
             <template v-else-if="module.title == 'ContactCard'">
                 <ContactCard :props="module.props" />
-            </template> 
+            </template>
         </template>
         <Footer
             :logo="footer.logo"
@@ -110,7 +110,7 @@ const modules = [
                     title: "Reliable Experts",
                     text: "Lorem ipsum dolor sit amet consecte. Bibendum tempus aliquam sed.",
                     icon: {
-                        path: IconFeature,
+                        path: "/images/icons/paint-roller-svgrepo-com.svg",
                         alt: "icon feature",
                     },
                 },
@@ -119,7 +119,7 @@ const modules = [
                     title: "Licensed Contractor",
                     text: "Lorem ipsum dolor sit amet consecte. Bibendum tempus aliquam sed.",
                     icon: {
-                        path: IconFeature,
+                        path: "/images/icons/construction-worker-svgrepo-com.svg",
                         alt: "icon feature",
                     },
                 },
@@ -128,7 +128,7 @@ const modules = [
                     title: "Quality Guaranteed",
                     text: "Lorem ipsum dolor sit amet consecte. Bibendum tempus aliquam sed.",
                     icon: {
-                        path: IconFeature,
+                        path: "/images/icons/quality-supervision-svgrepo-com.svg",
                         alt: "icon feature",
                     },
                 },
@@ -185,7 +185,10 @@ const modules = [
                     title: "Kitchen Remodeling",
                     description:
                         "Nulla neque lorem aliquam lectus consequat scelerisque fermentum sit justo. ",
-                    button: "Learn More",
+                    button: {
+                        url: "#",
+                        title: "Learn More",
+                    },
                 },
                 {
                     image: {
@@ -194,7 +197,10 @@ const modules = [
                     title: "Bathroom Remodeling",
                     description:
                         "Nulla neque lorem aliquam lectus consequat scelerisque fermentum sit justo. ",
-                    button: "Learn More",
+                    button: {
+                        url: "#",
+                        title: "Learn More",
+                    },
                 },
                 {
                     image: {
@@ -203,7 +209,10 @@ const modules = [
                     title: "Basement Remodeling",
                     description:
                         "Nulla neque lorem aliquam lectus consequat scelerisque fermentum sit justo. ",
-                    button: "Learn More",
+                    button: {
+                        url: "#",
+                        title: "Learn More",
+                    },
                 },
                 {
                     image: {
@@ -212,7 +221,10 @@ const modules = [
                     title: "Tile & Flooring",
                     description:
                         "Nulla neque lorem aliquam lectus consequat scelerisque fermentum sit justo. ",
-                    button: "Learn More",
+                    button: {
+                        url: "#",
+                        title: "Learn More",
+                    },
                 },
                 {
                     image: {
@@ -221,7 +233,10 @@ const modules = [
                     title: "Investor Services",
                     description:
                         "Nulla neque lorem aliquam lectus consequat scelerisque fermentum sit justo. ",
-                    button: "Learn More",
+                    button: {
+                        url: "#",
+                        title: "Learn More",
+                    },
                 },
                 {
                     image: {
@@ -230,7 +245,10 @@ const modules = [
                     title: "Handyman Services",
                     description:
                         "Nulla neque lorem aliquam lectus consequat scelerisque fermentum sit justo. ",
-                    button: "Learn More",
+                    button: {
+                        url: "#",
+                        title: "Learn More",
+                    },
                 },
             ],
         },
@@ -311,20 +329,20 @@ const modules = [
                 "Lorem ipsum dolor sit amet consectetur. Iaculis ac vitae a rutrum in non nullam viverra. Est mattis dolor eget sociis quam nunc. Malesuada eget non pretium aliquet. Imperdiet id amet pulvinar eleifend mauris",
             form: {
                 email: {
-                    label: 'Email:',
-                    placeholder: 'example@email.com'
+                    label: "Email:",
+                    placeholder: "example@email.com",
                 },
                 name: {
-                    label: 'Name',
-                    placeholder: 'Name'
+                    label: "Name",
+                    placeholder: "Name",
                 },
                 phone: {
-                    label: 'Phone',
-                    placeholder: '+1 446 XXX XXXX'
+                    label: "Phone",
+                    placeholder: "+1 446 XXX XXXX",
                 },
-                description:{
-                    label: 'Description',
-                    placeholder: 'Description...'
+                description: {
+                    label: "Description",
+                    placeholder: "Description...",
                 },
             },
         },

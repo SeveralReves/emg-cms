@@ -30,24 +30,28 @@ Route::get('/', function () {
             'menu' => [
                 [
                     'title' => 'Home',
-                    'url' => '#',
+                    'url' => '#home',
+                ],
+                [
+                    'title' => 'Features',
+                    'url' => '#features',
                 ],
                 [
                     'title' => 'Services',
-                    'url' => '#',
+                    'url' => '#services',
                 ],
                 [
                     'title' => 'About Us',
-                    'url' => '',
+                    'url' => '#about',
                 ],
                 [
                     'title' => 'Contact Us',
-                    'url' => '',
+                    'url' => '#footer',
                 ],
             ],
             'button' => [
                 'title' => 'Get a Quote',
-                'url' => '#'
+                'url' => '#quote'
             ]
         ],
         'footer' => [

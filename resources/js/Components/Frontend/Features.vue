@@ -7,14 +7,14 @@ defineProps({
 </script>
 
 <template>
-    <ul class="features">
+    <ul id="features" class="features">
         <div class="container features__container">
             <li
                 v-for="(feature, index) in props.items"
                 :key="index"
                 class="features__item"
                 data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200" 
+                :data-aos-delay="200 + index*150" 
             >
                 <img :src="feature.icon.path" :alt="feature.icon.alt" />
                 <h2 class="title">{{ feature.title }}</h2>
@@ -59,9 +59,9 @@ defineProps({
             padding: 0;
         }
         & > img {
-            border: 1px solid orange;
-            min-height: 20px;
-            min-width: 20px;
+            width: 100%;
+            max-height: 100px;
+            max-width: 100px;
         }
         .title {
             font-family: "DM sans", sans-serif;
@@ -70,7 +70,7 @@ defineProps({
             padding: 0;
             border: red;
             font-weight: 500;
-            margin: 70px 0 0 0;
+            margin: 40px 0 0 0;
             @media (max-width: 992px) {
                 margin-top: 20px;
             font-size: 28px;

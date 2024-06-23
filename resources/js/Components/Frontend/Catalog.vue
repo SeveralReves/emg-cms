@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="list_options">
+    <div id="services" class="list_options">
         <div class="container">
             <div class="list_options_title">
                 <p v-if="props.catalog_header_left" class="list_options--headL">
@@ -20,7 +20,7 @@ defineProps({
                     class="list_options--headR"
                 ></h2>
             </div>
-            <div class="list_options_body">
+            <div class="list_options_body" >
                 <article
                     v-for="(catalog, index) in props.elements_options"
                     :key="index"
@@ -30,7 +30,7 @@ defineProps({
                     <div class="text_container">
                         <h2 class="title">{{ catalog.title }}</h2>
                         <p class="description">{{ catalog.description }}</p>
-                        <button class="button">{{ catalog.button }}</button>
+                        <a class="button" :href="catalog.button.url" target="_blank" rel="noopener noreferrer">{{ catalog.button.title }}</a>
                     </div>
                 </article>
             </div>
@@ -192,7 +192,7 @@ body {
     font-family: "DM Sans", sans-serif;
     color: #ffffff;
     background: #da6f17;
-    padding: 16px 12px;
+    padding: 10px 25px;
     border-radius: 50px;
     margin-top: 10px; /* Espacio entre la descripción y el botón */
     align-self: flex-end; /* Alinea el botón a la derecha */

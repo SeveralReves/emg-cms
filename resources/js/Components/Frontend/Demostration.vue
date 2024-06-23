@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="demo_default">
+    <div id="about" class="demo_default">
         <span class="demo_default--ellipse"></span>
         <span class="demo_default--ellipse-top-right"></span>
         <img
@@ -18,9 +18,13 @@ defineProps({
         />
         <div class="demo_default--overlay"></div>
         <div class="demo_default--content container">
-            <div class="demo_default--head" v-html="props.title"></div>
+            <div class="demo_default--head" v-html="props.title" data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"></div>
             <!-- <img class="demo--head-icon" :src="props.projectp.icon.path }}" alt="{{ projectp.icon.alt }}" /> -->
-            <div class="demo_default--body" v-html="props.text"></div>
+            <div class="demo_default--body" v-html="props.text" data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"></div>
 
             <video
                 v-if="props.video.path"
@@ -30,15 +34,23 @@ defineProps({
                 no-controls
                 autoplay
                 muted
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"
             >
                 Tu navegador no soporta el elemento de video.
             </video>
 
-            <div class="demo_default--text" v-html="props.subtext"></div>
+            <div class="demo_default--text" v-html="props.subtext" data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"></div>
             <a
                 v-if="props.button.url"
                 :href="props.button.url"
                 class="demo_default--button"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"
                 >{{ props.button.title ?? "See more" }}</a
             >
         </div>
@@ -185,16 +197,16 @@ defineProps({
 .demo_default--button {
     color: #ffffff;
     background-color: transparent;
-    border-color: #70b22f;
+    border: 1px solid #70b22f;
     border-radius: 30px;
     padding: 10px 20px;
     font-size: 20px;
     font-family: "DM sans", sans-serif;
     font-weight: 500;
     margin: 10px 10px 30px 10px;
-    transition: all 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
     &:hover {
-        background-color: #51574b; /* Cambia el color de fondo al pasar el ratón */
+        background-color: #70b22f; /* Cambia el color de fondo al pasar el ratón */
     }
 }
 </style>
