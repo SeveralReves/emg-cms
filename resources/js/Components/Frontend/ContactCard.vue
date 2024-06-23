@@ -16,10 +16,15 @@ defineRule("email", (value) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(value) ? true : "This must be a valid email";
 });
+const phoneRegExp = /^(?:\+1)?\s*\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+
 
 const validationSchema = yup.object({
     name: yup.string().required("Name is required"),
-    phone: yup.string().required("Phone number is required"),
+    phone: yup
+    .string()
+    .matches(phoneRegExp, 'Phone number is not valid')
+    .required('Phone number is required'),
     email: yup
         .string()
         .email("This must be a valid email")
