@@ -132,6 +132,7 @@ Route::get('/', function () {
 Route::get('/dashboard', [BackendController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/header', [BackendController::class, 'header'])->middleware(['auth', 'verified'])->name('header');
+Route::get('/quotes', [BackendController::class, 'quotes'])->middleware(['auth', 'verified'])->name('quotes');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

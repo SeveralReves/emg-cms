@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Option;
 use App\Models\Menu;
+use App\Models\Quote;
 
 class BackendController extends Controller
 {
@@ -117,5 +118,11 @@ class BackendController extends Controller
 
 
         return Inertia::render('Header', compact('options', 'structure'));
+    }
+    public function quotes()
+    {
+        $quotes = Quote::get();
+
+        return Inertia::render('Quotes', compact('quotes'));
     }
 }
