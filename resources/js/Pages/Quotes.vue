@@ -2,7 +2,7 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head } from "@inertiajs/vue3";
 import { defineComponent, reactive, ref, onMounted } from "vue";
-import { format } from 'date-fns';
+import { format } from "date-fns";
 
 const props = defineProps({
     quotes: {
@@ -12,7 +12,7 @@ const props = defineProps({
 });
 
 const formatDate = (dateString) => {
-    return format(new Date(dateString), 'yyyy-MM-dd');
+    return format(new Date(dateString), "yyyy-MM-dd");
 };
 </script>
 
@@ -51,30 +51,39 @@ const formatDate = (dateString) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr
-                                    v-for="quote in quotes"
-                                    :key="quote.id"
-                                    class="quotes__table--table-tr"
-                                >
-                                    <td class="quotes__table--table-td">
-                                        {{ quote.id }}
-                                    </td>
-                                    <td class="quotes__table--table-td">
-                                        {{ quote.name }}
-                                    </td>
-                                    <td class="quotes__table--table-td">
-                                        {{ quote.phone }}
-                                    </td>
-                                    <td class="quotes__table--table-td">
-                                        {{ quote.email }}
-                                    </td>
-                                    <td class="quotes__table--table-td">
-                                        {{ quote.description }}
-                                    </td>
-                                    <td class="quotes__table--table-td">
-                                        {{ formatDate(quote.created_at) }}
-                                    </td>
-                                </tr>
+                                <template v-if="quotes.length">
+                                    <tr
+                                        v-for="quote in quotes"
+                                        :key="quote.id"
+                                        class="quotes__table--table-tr"
+                                    >
+                                        <td class="quotes__table--table-td">
+                                            {{ quote.id }}
+                                        </td>
+                                        <td class="quotes__table--table-td">
+                                            {{ quote.name }}
+                                        </td>
+                                        <td class="quotes__table--table-td">
+                                            {{ quote.phone }}
+                                        </td>
+                                        <td class="quotes__table--table-td">
+                                            {{ quote.email }}
+                                        </td>
+                                        <td class="quotes__table--table-td">
+                                            {{ quote.description }}
+                                        </td>
+                                        <td class="quotes__table--table-td">
+                                            {{ formatDate(quote.created_at) }}
+                                        </td>
+                                    </tr>
+                                </template>
+                                <template v-else>
+                                    <tr>
+                                        <td class="text-center font-semibold text-md text-gray-500 leading-tight p-2" COLSPAN="6">
+                                            No hay registros aun
+                                        </td>
+                                    </tr>
+                                </template>
                             </tbody>
                         </table>
                     </div>
